@@ -6,7 +6,7 @@ In this project we process and clean data from strap-on sensors (accelerometers,
 
 The data set comes in multiple parts. We first load in the training and test data. These include the sensor features (`X_train.txt, X_test.txt`), the output activity labels (`y_train.txt, y_test.txt`), and the subject labels (`subject_train.txt, subject_test.txt`).
 
-These are then stacked into a super set, where activity and subject labels are stacked column wise (using `cbind()`) with respect to their training and test features. The training super set is then stacked on top (using `rbind()`) of the test super set to create one combined data set.
+These are then stacked together to create one data set. The training sets are stacked on top (using `rbind()`) of test sets for sensor features, activity label, and subject labels. The row stacked activity and subject labels are then stacked column wise (using `cbind()`) with the row stacked sensor features to create one combined data set.
 
 Camel casing have been chosen for variable names for readability.
 
